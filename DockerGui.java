@@ -7,6 +7,9 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
 
+import java.awt.Desktop;
+import java.net.URI;
+
 public class DockerGui {
 
 	public static void main(String[] args){
@@ -81,6 +84,13 @@ public class DockerGui {
 		}
 
 		public void actionPerformed(ActionEvent ev) {
+			try {
+				if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+				    Desktop.getDesktop().browse(new URI("https://rstudio.cloud/"));
+				}
+			} catch(Exception e) {
+				System.out.println("Error");
+			}
 			// Open RStuido
 			System.out.println("Pressed: rstudio");
 		}
@@ -103,6 +113,13 @@ public class DockerGui {
 		}
 
 		public void actionPerformed(ActionEvent ev) {
+			try {
+				if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+				    Desktop.getDesktop().browse(new URI("https://welcome.oda.sas.com/login"));
+				}
+			} catch(Exception e) {
+				System.out.println("Error");
+			}
 			// Open IBM SAS
 			System.out.println("Pressed: ibmsas");
 		}
@@ -125,6 +142,13 @@ public class DockerGui {
 		}
 
 		public void actionPerformed(ActionEvent ev) {
+			try {
+				if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+				    Desktop.getDesktop().browse(new URI("https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master"));
+				}
+			} catch(Exception e) {
+				System.out.println("Error");
+			}
 			// Open Jupyter Notebook
 			System.out.println("Pressed: jupyter");
 		}
@@ -147,6 +171,13 @@ public class DockerGui {
 		}
 
 		public void actionPerformed(ActionEvent ev) {
+			try {
+				if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+				    Desktop.getDesktop().browse(new URI("https://visualstudio.com/login"));
+				}
+			} catch(Exception e) {
+				System.out.println("Error");
+			}
 			// Open Visual Studio Code IDE
 			System.out.println("Pressed: vscodeide");
 		}
@@ -180,6 +211,13 @@ public class DockerGui {
 		}
 
 		public void actionPerformed(ActionEvent ev) {
+			try {
+				if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+				    Desktop.getDesktop().browse(new URI("https://sso.online.tableau.com/public/idp/SSO"));
+				}
+			} catch(Exception e) {
+				System.out.println("Error");
+			}
 			// Open Tableau
 			System.out.println("Pressed: tableau");
 		}
@@ -191,6 +229,13 @@ public class DockerGui {
 		}
 
 		public void actionPerformed(ActionEvent ev) {
+			try {
+				if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+				    Desktop.getDesktop().browse(new URI("https://sonarcloud.io/sessions/new"));
+				}
+			} catch(Exception e) {
+				System.out.println("Error");
+			}
 			// Open SonarCloud
 			System.out.println("Pressed: sonarcloud");
 		}
