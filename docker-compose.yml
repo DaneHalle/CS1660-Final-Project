@@ -1,5 +1,5 @@
 # To set display variable, type the following in your command line depending on OS
-# Windows: $env:DISPLAY=<YOUR_IP>:0.0
+# Windows: $env:DISPLAY="<YOUR_IP>:0.0"
 # Linux: export DISPLAY=<YOUR_IP>:0.0
 services:
   git: 
@@ -88,13 +88,29 @@ services:
       - DISPLAY=$DISPLAY
     volumes:
       - ./MicroServices:/root
-  # hadoop: 
-  #   build: ./HadoopDocker
-  #   image: hadoopdocker
-  #   environment: 
-  #     - DISPLAY=$DISPLAY
-  #   volumes:
-  #     - ./MicroServices:/root
+  hadoop: 
+    build: ./HadoopDocker
+    image: hadoopdocker
+    environment: 
+      - DISPLAY=$DISPLAY
+      - HADOOP_HOME=/usr/local/hadoop 
+      - HADOOP_INSTALL=/usr/local/hadoop 
+      - HADOOP_MAPRED_HOME=/usr/local/hadoop 
+      - HADOOP_COMMON_HOME=/usr/local/hadoop 
+      - HADOOP_HDFS_HOME=/usr/local/hadoop 
+      - YARN_HOME=/usr/local/hadoop 
+      - HADOOP_COMMON_LIB_NATIVE_DIR=/usr/local/hadoop/lib/native 
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/hadoop/sbin:/usr/local/hadoop/bin 
+      - HADOOP_OPTS="-Djava.library.path=/usr/local/hadoop/lib/native"
+      - HDFS_NAMENODE_USER=root
+      - HDFS_DATANODE_USER=root
+      - YARN_RESOURCEMANAGER_USER=root
+      - YARN_NODEMANAGER_USER=root
+      - HDFS_SECONDARYNAMENODE_USER=root
+      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+      - HADOOP_CLASSPATH+=\" /usr/local/hadoop/lib/*.jar\"
+    volumes:
+      - ./MicroServices:/root
   gui: 
     build: ./gui
     image: gui
@@ -111,7 +127,7 @@ services:
       - tableau
       - tensorflow
       - vscode
-      # - hadoop
+      - hadoop
     environment: 
       - DISPLAY=$DISPLAY
     volumes: 
