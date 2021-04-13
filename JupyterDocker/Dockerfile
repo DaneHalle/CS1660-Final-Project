@@ -1,5 +1,5 @@
 FROM ubuntu
-WORKDIR /code
+WORKDIR /root
 
 RUN apt-get update && \
     apt-get upgrade -y
