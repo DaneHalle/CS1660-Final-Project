@@ -25,4 +25,4 @@ Spyder: When opened, it gives an error saying that it is missing a dependency. U
 
 ## Video 
 
-To Be Added 
+[Code Walkthrough and Demo](https://pitt-my.sharepoint.com/:v:/g/personal/dmh148_pitt_edu/Efu2fplOHkhJu5qXP-RhIF8BCYrX5IMaeOat_ZM9ZjGP8w?e=oFsSkS)
