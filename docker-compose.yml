@@ -8,77 +8,77 @@ services:
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   ibm: 
     build: ./IBMSASDocker
     image: ibmsasdocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   jupyter: 
     build: ./JupyterDocker
     image: jupyterdocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   markdown: 
     build: ./MarkdownDocker
     image: markdowndocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   orange: 
     build: ./OrangeDocker
     image: orangedocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   pyspark: 
     build: ./PySparkDocker
     image: pysparkdocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   rstudio: 
     build: ./RStudioDocker
     image: rstudiodocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   sonarcloud: 
     build: ./SonarCloudDocker
     image: sonarclouddocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   tableau: 
     build: ./TableauDocker
     image: tableaudocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   tensorflow: 
     build: ./TensorflowDocker
     image: tensorflowdocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   spyder: 
     build: ./SpyderDocker
     image: spyderdocker
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   vscode: 
     build: ./VSCodeIDEDocker
     environment:
@@ -87,14 +87,14 @@ services:
     environment: 
       - DISPLAY=$DISPLAY
     volumes:
-      - ./MicroServices:/code
+      - ./MicroServices:/root
   # hadoop: 
   #   build: ./HadoopDocker
   #   image: hadoopdocker
   #   environment: 
   #     - DISPLAY=$DISPLAY
   #   volumes:
-  #     - ./MicroServices:/code
+  #     - ./MicroServices:/root
   gui: 
     build: ./gui
     image: gui
@@ -115,4 +115,4 @@ services:
     environment: 
       - DISPLAY=$DISPLAY
     volumes: 
-      - ./MicroServices:/code
+      - ./MicroServices:/root

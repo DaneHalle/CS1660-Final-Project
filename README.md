@@ -18,3 +18,7 @@
 - A custom solution docker image for each Micro Service container.
 - A Python GUI that opens each Micro Service by placing an expected file into the shared system where the docker container has a script running looking for that file in order to execute and start the program/browser/terminal. The file is then removed upon start. 
 - Upon closure of the Python GUI, expected stop files are placed into the shared system where the docker container's script is looking for in order to stop the script and remove the stop file. 
+
+## Video 
+
+To Be Added 
