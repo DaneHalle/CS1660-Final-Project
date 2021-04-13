@@ -1,16 +1,18 @@
 FROM ubuntu
 WORKDIR /root
 
-
 RUN apt-get update && \
     apt-get upgrade -y 
 
-RUN apt install -y firefox
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt-get install -y firefox
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get install -y python3 \
-    				   python3-pip \
-    				   xterm 
+                       python3-pip
+
+RUN DEBIAN_FRONTEND=noninteractive \
+	apt-get install -y xterm 
 
 RUN pip3 install --upgrade tensorflow
 

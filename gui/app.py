@@ -1,26 +1,3 @@
-# docker build -t test-gui .
-# docker run -e DISPLAY=10.0.0.141:0.0 test-gui
-# WINDOWS -> $env:DISPLAY=<YOUR_IP>:0.0
-
-# https://github.com/gdhorne/data-scientists-toolbox
-
-# spyder
-# https://github.com/spyder-ide/spyder
-
-# Orange3
-# https://orangedatamining.com/download/#windows
-
-# VS Code IDE
-# https://code.visualstudio.com/download
-# https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/
-
-# Hadoop
-# https://github.com/big-data-europe/docker-hadoop
-# https://medium.com/analytics-vidhya/how-to-easily-install-hadoop-with-docker-ad094d556f11
-
-# Tensorflow
-# https://github.com/matterport/Mask_RCNN/issues/1328
-
 import tkinter as tk
 import os
 import atexit

@@ -5,13 +5,15 @@ RUN apt-get update && \
     apt-get upgrade -y
 
 RUN DEBIAN_FRONTEND=noninteractive \
-    apt install -y firefox \
-				   openjdk-8-jdk 
+    apt-get install -y firefox
+			
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt-get install -y openjdk-8-jdk \
+    				   xterm
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get install -y python3 \
-    				   python3-pip \
-    				   xterm
+    				   python3-pip 
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt

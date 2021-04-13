@@ -4,7 +4,8 @@ WORKDIR /root
 RUN apt-get update && \
     apt-get upgrade -y
 
-RUN apt install -y firefox
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt-get install -y firefox
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get install -y python3 \

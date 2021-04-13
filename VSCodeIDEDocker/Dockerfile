@@ -5,13 +5,13 @@ RUN apt-get update && \
     apt-get upgrade -y
 
 RUN DEBIAN_FRONTEND=noninteractive \
-    apt install -y firefox \
-                   xterm
+    apt-get install -y firefox
 
 RUN DEBIAN_FRONTEND=noninteractive \
-    apt install -y software-properties-common \
-                   apt-transport-https \
-                   wget
+    apt-get install -y software-properties-common \
+	                   apt-transport-https \
+	                   wget \
+	                   xterm
 
 RUN wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add -
 	
