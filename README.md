@@ -1,13 +1,18 @@
 # CS1660-Final-Project
 
+By Dane Halle (dmh148@pitt.edu)
+
 ## How to start running this
 
-1. Run XLaunch as described in Docker Homework from earlier in the semester
-2. Set your shell's DISPLAY variable to be your IP:0.0
+1. Run `git clone https://github.com/DaneHalle/CS1660-Final-Project.git` on your local machine and cd into the `CS1660-Final-Project` folder.
+2. Run XLaunch as described in Docker Homework from [earlier in the semester](https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde).
+3. Set your shell's DISPLAY variable to be your IP:0.0
 	1. For Windows: `$env:"DISPLAY=<YOUR_IP>:0.0"`
 	2. For Linux/MacOS: `export DISPLAY=<YOUR_IP>:0.0`
-3. Run `docker-compose up --build` and wait (May take a **long** time...Around 30 minutes when I did a build with no cached layers)
+4. Run `docker-compose up --build` and wait (May take a **long** time if building for the first time...Around 30 minutes when I did a build with no cached layers)
 	1. *Note: I ran into some issues where the build just fails for no good reason but have thrown that up to unstable network issues. If build fails, please retry once or twice.*
+5. Use the GUI when it pops up as desired
+6. When done, close out of the GUI by pressing the X at the top of the window and all containers should close automatically
 
 ## Important Notes
 
