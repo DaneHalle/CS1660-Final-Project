@@ -1,0 +1,118 @@
+# To set display variable, type the following in your command line depending on OS
+# Windows: $env:DISPLAY=<YOUR_IP>:0.0
+# Linux: export DISPLAY=<YOUR_IP>:0.0
+services:
+  git: 
+    build: ./GitDocker
+    image: gitdocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  ibm: 
+    build: ./IBMSASDocker
+    image: ibmsasdocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  jupyter: 
+    build: ./JupyterDocker
+    image: jupyterdocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  markdown: 
+    build: ./MarkdownDocker
+    image: markdowndocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  orange: 
+    build: ./OrangeDocker
+    image: orangedocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  pyspark: 
+    build: ./PySparkDocker
+    image: pysparkdocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  rstudio: 
+    build: ./RStudioDocker
+    image: rstudiodocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  sonarcloud: 
+    build: ./SonarCloudDocker
+    image: sonarclouddocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  tableau: 
+    build: ./TableauDocker
+    image: tableaudocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  tensorflow: 
+    build: ./TensorflowDocker
+    image: tensorflowdocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  spyder: 
+    build: ./SpyderDocker
+    image: spyderdocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  vscode: 
+    build: ./VSCodeIDEDocker
+    environment:
+      - DONT_PROMPT_WSL_INSTALL=1
+    image: vscodedocker
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes:
+      - ./MicroServices:/code
+  # hadoop: 
+  #   build: ./HadoopDocker
+  #   image: hadoopdocker
+  #   environment: 
+  #     - DISPLAY=$DISPLAY
+  #   volumes:
+  #     - ./MicroServices:/code
+  gui: 
+    build: ./gui
+    image: gui
+    depends_on:
+      - git
+      - ibm
+      - jupyter
+      - markdown
+      - orange
+      - pyspark
+      - rstudio
+      - sonarcloud
+      - spyder
+      - tableau
+      - tensorflow
+      - vscode
+      # - hadoop
+    environment: 
+      - DISPLAY=$DISPLAY
+    volumes: 
+      - ./MicroServices:/code
