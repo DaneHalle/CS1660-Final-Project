@@ -7,8 +7,8 @@ By Dane Halle (dmh148@pitt.edu)
 1. Run `git clone https://github.com/DaneHalle/CS1660-Final-Project.git` on your local machine and cd into the `CS1660-Final-Project` folder.
 2. Run XLaunch as described in Docker Homework from [earlier in the semester](https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde).
 3. Set your shell's DISPLAY variable to be your IP:0.0
-	1. For Windows: `$env:"DISPLAY=<YOUR_IP>:0.0"`
-	2. For Linux/MacOS: `export DISPLAY=<YOUR_IP>:0.0`
+	1. For Windows: `$env:DISPLAY="<YOUR_IP>:0.0"`
+	2. For Linux/MacOS: `export DISPLAY="<YOUR_IP>:0.0"`
 	3. If you would rather change the docker-compose.yml file, replace all instances of `$DISPLAY` with `<YOUR_IP>:0.0`.
 4. Run `docker-compose up --build` and wait (May take a **long** time if building for the first time...Around 30 minutes when I did a build with no cached layers)
 	1. *Note: I ran into some issues where the build just fails for no good reason but have thrown that up to unstable network issues. If build fails, please retry once or twice.*
