@@ -1,6 +1,6 @@
 # To set display variable, type the following in your command line depending on OS
 # Windows: $env:DISPLAY="<YOUR_IP>:0.0"
-# Linux: export DISPLAY=<YOUR_IP>:0.0
+# Linux: export DISPLAY="<YOUR_IP>:0.0"
 services:
   git: 
     build: ./GitDocker
